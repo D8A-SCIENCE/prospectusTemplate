@@ -1,0 +1,43 @@
+% Chapter Template
+
+\chapter{Introduction} % Main chapter title
+%this should end up being roughly 3 pages
+
+\label{Chapter1} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+
+%\textit{Specific research question}
+
+%Can a convolutional neural network be leveraged to identify imagery features that can predict conflict that meets or exceeds current state-of-the-art solutions? 
+
+Instances of social unrest, often manifesting as riots or protests, 
+wield significant influence on the communities, regions, and nations 
+in which they unfold \citep{bencsik2018non}.  The repercussions of such events are wide-ranging, ranging from geopolitical transformations (i.e., riots in Egypt in 2011 \citep{joya2011egyptian} and Hong Kong in 2019 \citep{purbrick2019report}) to substantial economic losses (exemplified by the hundreds of millions of dollars incurred during the 2011 riots in the UK \citep{bencsik2018non}).  These events may result in human casualties, as evidenced by food riots in Africa in 2007-08 \citep{berazneva2013explaining} and riots caused by garbage collection issues in Beirut in 2015 \citep{el2019riots}.  These events impact cities across the entire globe, with recent examples in Latin America \citep{eckstein2001power}, Asia \citep{purbrick2019report}, Africa \citep{joya2011egyptian, berazneva2013explaining}, and Europe \citep{andronikidou2012cultures}.  Because of the importance of these events, scholars across multiple disciplines have sought to both predict and understand them, using a wide range of data sources and techniques \citep{pond2019riots, snow2007framing, davies2013mathematical}.  However, most of these approaches have relied on sources that may not be available or reliable in geographies of interest, such as news articles.  Here, we explore the capability of satellite imagery to aid in the prediction of protest and riot events, explicitly seeking to understand the degree to which this globally-available source of information may be able to augment existing predictive methodologies. This approach exploits correlations between the human built environment - i.e., urban form \citep{fox2016urban} - and the likelihood of a protest or conflict event at a given geographic location.
+
+
+One of the core innovations that enables us to estimate social events (such as conflict) using satellite imagery is convolutional modeling \citep{goodman2021convolutional}. 
+Deep learning, including the use of Convolutional Neural Networks (CNNs), is being used in a wide range of applications from estimating school test scores \citep{runfola2022using} and predicting poverty rates \citep{jean2016combining}, to detecting changes in urban environments \citep{daudt2018urban} and tracking typhoons \citep{ruttgers2019prediction}.  This includes innovations from the field of computer vision, which have shown the capability of CNNs to detect objects \citep{shin2016deep},  classify images \citep{krizhevsky2017imagenet}, and recognize images \citep{chauhan2018convolutional}.  Deep learning can be used in conjunction with satellite imagery to perform many different classification and detection tasks, such as detecting infrastructure destruction in conflict environments \citep{nabiee2022hybrid}, identifying ships \citep{leclerc2018ship,patel2022deep}, land cover and land usage analysis \citep{helber2019eurosat, kussul2017deep, carranza2019framework, lv2024mapping}, urban expansion \citep{zhang2018urban, he2019detecting, zhang2019detecting}, and road quality analysis \citep{brewer2021predicting}.  Building on this work, in this piece we combine global-scope high resolution satellite imagery sourced from \textit{Planet} with information on the spatial distribution of protest and riot events from \textit{ACLED}, seeking to establish the degree to which satellite information can be used to directly predict the geospatial locations of protest events. 
+
+In addition to this core aim, we further seek to advance our ability to understand the specific elements of urban form that the model finds are correlated with conflict.  This requires the development of new tools and techniques - broadly referred to as explainability techniques \citep{buhrmester2021analysis} - that are interoperable with satellite imagery.  Today, state of the art techniques such as Class Activation Maps (CAM) \citep{zhou2016learning} or  Deconvolution/inverting neural networks \citep{noh2015learning} are under-developed in the context of satellite imagery \citep{vasu2018aerial,charuchinda2019use,fu2019multicam}.  Paper 2 will focus on overcoming these limitations.
+
+An important aspect of utilizing satellite imagery in conjunction with deep learning, is the ability of techniques to scale.  If we are able to predict conflict, but only on small scales that compare small standardized images, our applications are limited.  We aspire to identify \textit{where} conflict will occur from full satellite scenes that cover hundreds of square kilometers.  Simply stated, are we able to train a neural network to identify the localized location of conflict from a full satellite scene.  This will necessitate new training methodologies to appropriately segment large satellite images into smaller portions, in an attempt to identify potential hot spots for future conflicts. These new methodologies will come with associated challenges that relate to training neural networks to handle segmented and subsetted data from full satellite images,  evaluating segmented images as part of larger satellite scenes to determine where hot spots exists, and potentially the requirement to generate more data for training and testing.
+
+
+With these three papers, we will explore the question \textit{does satellite imagery contain information that can be used to estimate the likelihood of conflict across geographic locations?}  To explore this question three sub-questions will be explored:\\
+%\textbf{RQ1. } \textit{Can satellite imagery alone be used to determine the likelihood of conflict in urban areas?}\\
+%\textbf{RQ2. }\textit{Explain the features within a satellite image that are consequential to classification of conflict?}\\
+%\textbf{RQ3. }\textit{Determine if it is possible to localize the location of conflict within a full size satellite image?  }
+\noindent
+\begin{tabularx}{\textwidth}{@{} l >{\raggedright\arraybackslash}X @{}}
+    \textbf{Q1.} & \textit{Can satellite imagery alone be used to determine the likelihood of conflict in urban areas?} \\
+    \textbf{Q2.} & \textit{Can we semantically describe the features within a satellite image that are consequential to the classification of urban conflict?} \\
+    \textbf{Q3.} & \textit{Can deep learning techniques enable the localization of conflict across a full-sized satellite image?} \\
+\end{tabularx}
+In this prospectus, I provide an initial quantitative analysis focused around \textbf{a convolutional neural network's ability to identify conflict}, designed to illustrate my quantitative capabilities as well as preliminary results.  For the following two research questions, I provide theory, datasets, and methods that I propose to test.  The prospectus is structured as follows.  In chapter 2, I introduce literature common to each of these research topics.  In chapter 3, I introduce my first research question, inclusive of a preliminary quantitative analysis.  In chapter 4, I introduce my future plans for research questions 2 and 3.  Finally, in chapter 5, I provide an outline of the anticipated schedule for graduation, as well as description of risks that may inhibit my progress and efforts to mitigate those risks.
+
+
+
